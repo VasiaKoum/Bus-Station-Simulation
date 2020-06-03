@@ -5,6 +5,6 @@ $(obj): %: %.c
 run:
 	./mystation -l config.csv -e YES -c NO
 val:
-	valgrind --trace-children=yes -v --leak-check=full --show-leak-kinds=all ./mystation -l config.csv -e YES
+	valgrind --trace-children=yes -v --leak-check=full --show-leak-kinds=all ./mystation -l config.csv -e YES -c NO
 clean:
 	rm -f mystation bus station-manager comptroller logfile
